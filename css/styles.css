@@ -848,6 +848,8 @@ body{
     border-radius: 4px;
 
     transition: border var(--common-transition);
+
+    resize: none;
 }
 
 .backdrop-textarea::placeholder{
