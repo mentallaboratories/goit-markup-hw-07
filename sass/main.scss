@@ -1,17 +1,4 @@
-:root {
-    --background-color: #FFFFFF;
-    --light-text-color: #FFFFFF;
-    --plain-text-color: #757575;
-    --link-text-color: #212121;
-    --title-text-color: #212121;
-    --accent-color: #2196F3;
-    --footer-contacts-color: rgba(255, 255, 255, 0.6);
-    --section-background-color: #2F303A;
-    --icon-default-color: #AFB1B8;
-
-    --common-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+@import './utils/vars';
 /*!!!!!!!!!!!!!!!!!!!!!! RESET CSS !!!!!!!!!!!!!!!!!!!!!!*/
 P,
 h1,
@@ -50,9 +37,9 @@ img {
 
 /*!!!!!!!!!!!!!!!!! body style !!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 body {
-    background-color: var(--background-color);
+    background-color: $backgroundColor;
     font-family: 'Roboto', sans-serif;
-    color: var(--plain-text-color);
+    color: $plainTextColor;
     font-size: 14px;
     letter-spacing: 0.03em;
 
@@ -127,7 +114,7 @@ body {
 }
 
 .accent {
-    color: var(--accent-color)
+    color: $accentColor;
 }
 
 /* arrange elements of nav contacts */
@@ -147,18 +134,18 @@ body {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--link-text-color);
+    color: $linkTextColor;
 
-    transition: color var(--common-transition);
+    transition: color $commonTransition;
 }
 
 .current {
-    color: var(--accent-color);
+    color: $accentColor;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--accent-color);
+    color: $accentColor;
 }
 
 
@@ -174,7 +161,7 @@ body {
     border-radius: 2px;
 
 
-    background-color: var(--accent-color);
+    background-color: $accentColor;
 }
 
 
@@ -183,24 +170,24 @@ body {
     display: inline-flex;
     gap: 10px;
     align-items: center;
-    color: var(--plain-text-color);
+    color: $plainTextColor;
 }
 
 .contacts-icon {
-    fill: var(--plain-text-color);
+    fill: $plainTextColor;
 
-    transition: fill var(--common-transition);
+    transition: fill $commonTransition;
 }
 
 
 .contacts-link:hover,
 .contacts-link:focus {
-    color: var(--accent-color);
+    color: $accentColor;
 }
 
 .contacts-link:hover .contacts-icon,
 .contacts-link:focus .contacts-icon {
-    fill: var(--accent-color);
+    fill: $accentColor;
 }
 
 
@@ -231,7 +218,7 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--light-text-color);
+    color: $lightTextColor;
 
     margin-bottom: 30px;
     margin-left: auto;
@@ -246,8 +233,8 @@ body {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
-    color: var(--light-text-color);
-    background-color: var(--accent-color);
+    color: $lightTextColor;
+    background-color: $accentColor;
 
     display: block;
     margin: 0 auto;
@@ -257,13 +244,13 @@ body {
     border-style: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    transition: color var(--common-transition), background-color var(--common-transition);
+    transition: color $commonTransition, background-color $commonTransition;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    color: var(--accent-color);
-    background-color: var(--background-color);
+    color: $accentColor;
+    background-color: $backgroundColor;
 }
 
 /* !!!!!!!!!!!   FEATURES       !!!!!!!!!! 
@@ -329,7 +316,7 @@ body {
     height: 70px;
     padding: 27px 0;
     background-color: rgba(47, 48, 58, 0.8);
-    color: var(--light-text-color);
+    color: $lightTextColor;
 
     font-weight: 700;
     line-height: 1.14;
@@ -351,7 +338,7 @@ body {
 
 .team-member-item {
     // width: calc((100%-90px)/4);
-    background: var(--background-color);
+    background: $backgroundColor;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -396,7 +383,7 @@ body {
 
 .social-list-link {
     border-radius: 50%;
-    background-color: var(--background-color);
+    background-color: $backgroundColor;
     width: 100%;
     height: 100%;
 
@@ -405,23 +392,23 @@ body {
     align-items: center;
     justify-content: center;
 
-    transition: background-color var(--common-transition);
+    transition: background-color $commonTransition;
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
-    background-color: var(--accent-color);
+    background-color: $accentColor;
 }
 
 .social-list-icon {
-    fill: var(--icon-default-color);
+    fill: $iconDefaultColor;
 
-    transition: fill var(--common-transition);
+    transition: fill $commonTransition;
 }
 
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
-    fill: var(--background-color);
+    fill: $backgroundColor;
 }
 
 
@@ -443,39 +430,39 @@ body {
     width: 100%;
     height: 100%;
 
-    background-color: var(--background-color);
-    border: 1px solid var(--icon-default-color);
+    background-color: $backgroundColor;
+    border: 1px solid $iconDefaultColor;
     border-radius: 4px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transition: border-color var(--common-transition);
+    transition: border-color $commonTransition;
 }
 
 
 .client-list-link:hover,
 .client-list-link:focus {
-    border-color: var(--accent-color);
+    border-color: $accentColor;
 }
 
 .client-list-icon {
-    fill: var(--icon-default-color);
+    fill: $iconDefaultColor;
 
-    transition: fill var(--common-transition);
+    transition: fill $commonTransition;
 }
 
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
-    fill: var(--accent-color);
+    fill: $accentColor;
 }
 
 
 
 /* !!!-------------footer-----------!!!! */
 .footer {
-    background-color: var(--section-background-color);
+    background-color: $sectionBackgroundColor;
 
     padding-top: 60px;
     padding-bottom: 60px;
@@ -489,7 +476,7 @@ body {
 
 
 .footer .logo {
-    color: var(--light-text-color);
+    color: $lightTextColor;
     display: block;
     margin-bottom: 20px;
 }
@@ -506,22 +493,22 @@ body {
 }
 
 .address-contacts {
-    color: var(--footer-contacts-color);
+    color: $footerContactsColor;
 
-    transition: color var(--common-transition);
+    transition: color $commonTransition;
 }
 
 /* unique map color */
 .address-map {
-    color: var(--light-text-color);
-    transition: color var(--common-transition);
+    color: $lightTextColor;
+    transition: color $commonTransition;
 }
 
 .address-map:hover,
 .address-map:focus,
 .address-contacts:hover,
 .address-contacts:focus {
-    color: var(--accent-color);
+    color: $accentColor;
 }
 
 
@@ -533,7 +520,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--light-text-color);
+    color: $lightTextColor;
 
     margin-bottom: 20px;
 }
@@ -545,7 +532,7 @@ body {
 
 
 .footer .social-list-icon {
-    fill: var(--background-color)
+    fill: $backgroundColor;
 }
 
 .footer-form-field {
@@ -567,7 +554,7 @@ body {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    color: var(--light-text-color);
+    color: $lightTextColor;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -616,14 +603,16 @@ body {
     min-width: 73px;
     padding: 6px 22px;
 
-    transition: background-color var(--common-transition), color var(--common-transition),
-        box-shadow var(--common-transition);
+    transition: 
+    background-color $commonTransition, 
+    color $commonTransition,
+        box-shadow $commonTransition;
 }
 
 .portfolio-filter-button:hover,
 .portfolio-filter-button:focus {
-    background-color: var(--accent-color);
-    color: var(--light-text-color);
+    background-color: $accentColor;
+    color: $lightTextColor;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 }
@@ -645,7 +634,7 @@ body {
 
     // width: calc((100%-60)/3);
     max-width: 370px;
-    background: var(--background-color);
+    background: $backgroundColor;
     border: 1px solid #EEEEEE;
 }
 
@@ -654,7 +643,7 @@ body {
     width: 100%;
     height: 100%;
 
-    transition: box-shadow var(--common-transition);
+    transition: box-shadow $commonTransition;
 }
 
 .portfolio-card-link:hover,
@@ -670,7 +659,7 @@ body {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--title-text-color);
+    color: $titleTextColor;
 
     margin-bottom: 4px;
 }
@@ -683,7 +672,7 @@ body {
 .portfolio-gallery-text {
     font-size: 16px;
     line-height: 1.87;
-    color: var(--plain-text-color);
+    color: $plainTextColor;
 }
 
 .portfolio-overlay {
@@ -698,7 +687,7 @@ body {
     background-color: rgba(33, 150, 243, 0.9);
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: transform var(--common-transition) 500ms;
+    transition: transform $commonTransition 500ms;
 }
 
 .portfolio-card-link:hover .portfolio-overlay,
@@ -709,7 +698,7 @@ body {
 .portfolio-overlay-text {
     font-size: 18px;
     line-height: 1.56;
-    color: var(--light-text-color);
+    color: $lightTextColor;
 }
 
 
@@ -727,7 +716,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opacity var(--common-transition), visibility var(--common-transition);
+    transition: opacity $commonTransition, visibility $commonTransition;
 }
 
 
@@ -750,7 +739,7 @@ body {
     border-radius: 4px;
 
     transform: translate(-50%, -50%) scaleY(1);
-    transition: transform var(--common-transition 250ms);
+    transition: transform $commonTransition 250ms;
 }
 
 .backdrop.is-hidden .modal {
@@ -776,12 +765,12 @@ body {
 .icon-exit-modal {
     fill: #000000;
 
-    transition: fill var(--common-transition);
+    transition: fill $commonTransition;
 }
 
 .exit-btn:hover .icon-exit-modal,
 .exit-btn:focus .icon-exit-modal {
-    fill: var(--accent-color);
+    fill: $accentColor;
 }
 
 .backdrop-form-title {
@@ -790,7 +779,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: var(--link-text-color);
+    color: $linkTextColor;
     margin-bottom: 12px;
 }
 
@@ -823,7 +812,7 @@ body {
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    color: var(--plain-text-color);
+    color: $plainTextColor;
 }
 
 .backdrop-input {
@@ -834,24 +823,24 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition: border var(--common-transition);
+    transition: border $commonTransition;
 }
 
 .backdrop-input:focus {
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accentColor;
 }
 
 .backdrop-input:hover+.input-icon,
 .backdrop-input:focus+.input-icon {
-    fill: var(--accent-color);
+    fill: $accentColor;
 }
 
 .backdrop-input:focus-within+.input-icon {
-    fill: var(--accent-color);
+    fill: $accentColor;
 }
 
 .backdrop-input:focus-within {
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accentColor;
     outline: none;
 }
 
@@ -863,7 +852,7 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition: border var(--common-transition);
+    transition: border $commonTransition;
 
     resize: none;
 }
@@ -877,11 +866,11 @@ body {
 }
 
 .backdrop-textarea:focus {
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accentColor;
 }
 
 .backdrop-textarea:focus-within {
-    border: 1px solid var(--accent-color);
+    border: 1px solid $accentColor;
     outline: none;
 }
 
@@ -890,8 +879,8 @@ body {
     left: 12px;
     bottom: 11px;
 
-    fill: var(--link-text-color);
-    transition: fill var(--common-transition);
+    fill: $linkTextColor;
+    transition: fill $commonTransition;
 }
 
 .backdrop-checkbox-field {
@@ -928,16 +917,16 @@ body {
     width: 16px;
     height: 16px;
 
-    border: 2px solid var(--link-text-color);
+    border: 2px solid $linkTextColor;
     border-radius: 2px;
 
-    transition: background-color var(--common-transition),
-        background-image var(--common-transition),
-        border var(--common-transition);
+    transition: background-color $commonTransition,
+        background-image $commonTransition,
+        border $commonTransition;
 }
 
 .backdrop-checkbox-input:checked+.custom-checkbox {
-    background-color: var(--accent-color);
+    background-color: $accentColor;
     background-image: url(../images/icon-check.svg);
     border: none;
     background-size: contain;
@@ -947,13 +936,13 @@ body {
 
 .terms-link {
     text-decoration-line: underline;
-    color: var(--accent-color);
+    color: $accentColor;
 }
 
 .backdrop-submit {
     width: 200px;
 
-    transition: background-color var(--common-transition);
+    transition: background-color $commonTransition;
 }
 
 .backdrop-submit:hover,
