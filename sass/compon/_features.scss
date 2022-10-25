@@ -1,0 +1,33 @@
+/* !!!!!!!!!!!   FEATURES       !!!!!!!!!! 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1*/
+
+
+.features-item {
+    // width: calc((100%-90px)/4);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+    max-width: 270px;
+    height: 120px;
+
+    background-color: #F5F4FA;
+}
+
+
+
+.features-title {
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    line-height: 1.71;
+}

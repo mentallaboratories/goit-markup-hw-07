@@ -1,0 +1,44 @@
+/* !!!!!!!!!!!!!   OUR  CLIENTS   !!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.client-list {
+    justify-items: center;
+}
+
+.client-list-item {
+    width: 170px;
+    height: 92px;
+}
+
+
+
+.client-list-link {
+    width: 100%;
+    height: 100%;
+
+    background-color: $backgroundColor;
+    border: 1px solid $iconDefaultColor;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: border-color $commonTransition;
+}
+
+
+.client-list-link:hover,
+.client-list-link:focus {
+    border-color: $accentColor;
+}
+
+.client-list-icon {
+    fill: $iconDefaultColor;
+
+    transition: fill $commonTransition;
+}
+
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon {
+    fill: $accentColor;
+}
