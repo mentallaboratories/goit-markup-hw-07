@@ -1,18 +1,23 @@
 @import './utils/vars';
 @import './base/normalize';
-@import './base/reset-css';
-@import './base/global-css';
-@import './compon/header';
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
+
 @import './compon/nav';
 @import './compon/contact';
-@import './compon/hero';
 @import './compon/button';
-@import './compon/features';
-@import './compon/activity';
-@import './compon/team';
 @import './compon/social';
-@import './compon/client';
-@import './compon/footer';
-@import './compon/portfolio';
 @import './compon/backdrop';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/activity';
+@import './layout/team';
+@import './layout/client';
+@import './layout/footer';
+@import './layout/portfolio';
+
+
 

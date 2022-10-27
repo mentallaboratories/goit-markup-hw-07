@@ -12,15 +12,16 @@
 
     opacity: 1;
     transition: opacity $commonTransition, visibility $commonTransition;
+    &.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+    
+        }
 }
 
 
-.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
 
-}
 
 .modal {
     position: absolute;
