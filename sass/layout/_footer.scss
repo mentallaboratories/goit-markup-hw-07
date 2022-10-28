@@ -4,6 +4,7 @@
 
     padding-top: 60px;
     padding-bottom: 60px;
+    
 }
 
 .footer-content {
@@ -12,48 +13,7 @@
     justify-content: space-between;
 }
 
-
-.footer .logo {
-    color: $lightTextColor;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-}
-
-.address-list-item {
-    line-height: 1.7;
-
-}
-
-.address-contacts {
-    color: $footerContactsColor;
-
-    transition: color $commonTransition;
-}
-
-/* unique map color */
-.address-map {
-    color: $lightTextColor;
-    transition: color $commonTransition;
-}
-
-.address-map:hover,
-.address-map:focus,
-.address-contacts:hover,
-.address-contacts:focus {
-    color: $accentColor;
-}
-
-
-/* ------- FOOTER SOCIAL LINKS -------------- */
-
-.social-links-title,
-.subscribe-title {
+.footer-block-title {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -63,27 +23,17 @@
     margin-bottom: 20px;
 }
 
-
-.social-list-link {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-.footer .social-list-icon {
-    fill: $backgroundColor;
-}
-
 .footer-form-field {
     display: flex;
     gap: 12px;
     align-items: center;
 }
 
-.email-label {
+.footer-form-label {
     position: absolute;
 }
 
-.subscribe-email-input {
+.footer-form-input {
     width: 358px;
     height: 50px;
 
@@ -98,23 +48,14 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding-left: 16px;
+
+    &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    
+    &:focus-within {
+        outline: none;
+    }
 }
 
-.subscribe-email-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
 
-.subscribe-email-input:focus-within {
-    outline: none;
-}
-
-.submit-button {
-    width: 200px;
-    height: 50px;
-
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.87;
-}

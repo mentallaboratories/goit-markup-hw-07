@@ -1,0 +1,34 @@
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.address-list-item {
+    line-height: 1.7;
+
+}
+
+.address-contacts {
+    color: $footerContactsColor;
+
+    transition: color $commonTransition;
+
+    &:hover,
+    &:focus{
+        color: $accentColor;
+    }
+}
+
+/* unique map color */
+.address-map {
+    color: $lightTextColor;
+    transition: color $commonTransition;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+

@@ -1,17 +1,16 @@
 /* -----social-list sprites menu -----*/
-
-.social-list {
+.social-list{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-
 .social-list-item {
     width: 44px;
     height: 44px;
 }
-
-
+    
+    
+    
 .social-list-link {
     border-radius: 50%;
     background-color: $backgroundColor;
@@ -24,20 +23,36 @@
     justify-content: center;
 
     transition: background-color $commonTransition;
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+    }
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
-    background-color: $accentColor;
-}
+
 
 .social-list-icon {
     fill: $iconDefaultColor;
-
     transition: fill $commonTransition;
+
+    .footer & {
+        fill: $backgroundColor;
+    }
+
+    .social-list-link:hover &,
+    .social-list-link:focus & {
+        fill: $backgroundColor;
+    }
 }
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-    fill: $backgroundColor;
+// footer links
+
+
+
+
+.social-list-link {
+    background-color: rgba(255, 255, 255, 0.1);
 }
+
+

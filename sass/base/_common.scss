@@ -7,9 +7,6 @@
     margin: 0 auto;
 }
 
-.section {
-    padding: 94px 0;
-}
 
 .no-padding-top {
     padding-top: 0;
@@ -21,23 +18,21 @@
 }
 
 
-.logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    color: #000000;
-}
 
 .accent {
     color: $accentColor;
 }
 
-.section-title {
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: var(--title-text-color);
+.current {
+    color: $accentColor;
+}
 
-    margin-bottom: 50px;
+body {
+    background-color: $backgroundColor;
+    font-family: 'Roboto', sans-serif;
+    color: $plainTextColor;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+
 }

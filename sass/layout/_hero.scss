@@ -17,7 +17,7 @@
     background-repeat: no-repeat;
 }
 
-.hero-title {
+.hero__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -31,4 +31,13 @@
     margin-right: auto;
     max-width: 696px;
 }
+
+.hero__button{
+    &:hover,
+    &:focus {
+        color: $accentColor;
+        background-color: $backgroundColor;
+    }
+}
+
 

@@ -1,5 +1,3 @@
-/* !!!!  BACKDROP   !!!!! */
-
 .backdrop {
     position: fixed;
     top: 0;
@@ -11,17 +9,16 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opacity $commonTransition, visibility $commonTransition;
-    &.is-hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-    
-        }
+    transition: opacity var(--common-transition), visibility var(--common-transition);
 }
 
 
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
+}
 
 .modal {
     position: absolute;
@@ -36,40 +33,15 @@
 
     transform: translate(-50%, -50%) scaleY(1);
     transition: transform $commonTransition 250ms;
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scaleY(0);
+    }
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scaleY(0);
-}
 
-.exit-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
 
-    width: 30px;
-    height: 30px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-exit-modal {
-    fill: #000000;
-
-    transition: fill $commonTransition;
-}
-
-.exit-btn:hover .icon-exit-modal,
-.exit-btn:focus .icon-exit-modal {
-    fill: $accentColor;
-}
-
-.backdrop-form-title {
+.modal-form-title {
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
@@ -79,7 +51,7 @@
     margin-bottom: 12px;
 }
 
-.backdrop-form {
+.modal-form {
     position: relative;
     top: 0;
     left: 0;
@@ -92,7 +64,7 @@
 
 }
 
-.backdrop-form-field {
+.modal-form-field {
     position: relative;
 
     display: flex;
@@ -103,7 +75,7 @@
     margin-bottom: 10px;
 }
 
-.backdrop-label {
+.modal-form-label {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -111,7 +83,7 @@
     color: $plainTextColor;
 }
 
-.backdrop-input {
+.modal-form-input {
     width: 100%;
     height: 40px;
     padding-left: 42px;
@@ -120,27 +92,20 @@
     border-radius: 4px;
 
     transition: border $commonTransition;
+
+    &:focus {
+        border: 1px solid $accentColor;
+    }
+
+    &:focus-within {
+        border: 1px solid $accentColor;
+        outline: none;
+    }
 }
 
-.backdrop-input:focus {
-    border: 1px solid $accentColor;
-}
 
-.backdrop-input:hover+.input-icon,
-.backdrop-input:focus+.input-icon {
-    fill: $accentColor;
-}
 
-.backdrop-input:focus-within+.input-icon {
-    fill: $accentColor;
-}
-
-.backdrop-input:focus-within {
-    border: 1px solid $accentColor;
-    outline: none;
-}
-
-.backdrop-textarea {
+.modal-form-textarea {
     padding: 12px 16px;
     width: 100%;
     height: 120px;
@@ -151,24 +116,26 @@
     transition: border $commonTransition;
 
     resize: none;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border: 1px solid $accentColor;
+    }
+
+    &:focus-within {
+        border: 1px solid $accentColor;
+        outline: none;
+    }
 }
 
-.backdrop-textarea::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
 
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.backdrop-textarea:focus {
-    border: 1px solid $accentColor;
-}
-
-.backdrop-textarea:focus-within {
-    border: 1px solid $accentColor;
-    outline: none;
-}
 
 .input-icon {
     position: absolute;
@@ -177,9 +144,18 @@
 
     fill: $linkTextColor;
     transition: fill $commonTransition;
+
+    .modal-form-input:hover + &,
+    .modal-form-input:focus + & {
+        fill: $accentColor;
+    }
+
+    .modal-form-input:focus-within + & {
+        fill: $accentColor;
+    }
 }
 
-.backdrop-checkbox-field {
+.modal-form-checkbox-field {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,12 +167,12 @@
     margin-bottom: 20px;
 }
 
-.backdrop-checkbox-input {
+.modal-form-checkbox-input {
     appearance: none;
     position: absolute;
 }
 
-.backdrop-checkbox-label {
+.modal-form-checkbox-label {
     display: flex;
     align-items: center;
     gap: 7px;
@@ -205,6 +181,7 @@
     padding: auto 0;
 
     line-height: 1.7;
+
 
 }
 
@@ -219,29 +196,20 @@
     transition: background-color $commonTransition,
         background-image $commonTransition,
         border $commonTransition;
+
+    .modal-form-checkbox-input:checked + & {
+            background-color: $accentColor;
+            background-image: url(../images/icon-check.svg);
+            border: none;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 }
 
-.backdrop-checkbox-input:checked+.custom-checkbox {
-    background-color: $accentColor;
-    background-image: url(../images/icon-check.svg);
-    border: none;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 .terms-link {
     text-decoration-line: underline;
     color: $accentColor;
-}
-
-.backdrop-submit {
-    width: 200px;
-
-    transition: background-color $commonTransition;
-}
-
-.backdrop-submit:hover,
-.backdrop-submit:focus {
-    background-color: #188CE8;
 }

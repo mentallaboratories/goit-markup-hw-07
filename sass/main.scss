@@ -4,18 +4,20 @@
 @import './base/common';
 @import './utils/hidden';
 
-@import './compon/nav';
-@import './compon/contact';
 @import './compon/button';
-@import './compon/social';
-@import './compon/backdrop';
+@import './compon/social-list';
+@import './compon/address';
+@import './compon/logo';
+@import './compon/section';
+@import './compon/modal';
+
 
 @import './layout/header';
 @import './layout/hero';
 @import './layout/features';
 @import './layout/activity';
 @import './layout/team';
-@import './layout/client';
+@import './layout/client-list';
 @import './layout/footer';
 @import './layout/portfolio';
 
