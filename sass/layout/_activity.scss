@@ -1,16 +1,18 @@
 /* !!!!!!!!!!!   ACTIVITY     !!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.activity{
+    padding-top: 0;
+}
 
 
-
-.activity-item {
+.activity__item {
     position: relative;
 
     // width: calc((100%-60px)/3);
     max-width: 370px;
 }
 
-.activity-title {
+.activity__title {
     position: absolute;
     left: 0;
     bottom: 0;

@@ -1,28 +1,19 @@
 /*!!!--------PORTFOLIO------------!!!*/
 
-.portfolio-filter {
+.filter{
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     gap: 9px;
-
 }
-
-
-
 
 /* !!!!!!   GALLERY TABLE    !!!!!!!!! */
 
-.portfolio-gallery {
+.portfolio__cardset {
     flex-wrap: wrap;
 }
 
-.portfolio-gallery-image {
-    max-width: 100%;
-    height: auto;
-}
-
-.portfolio-gallery-item {
+.card {
     position: relative;
 
     // width: calc((100%-60)/3);
@@ -30,8 +21,12 @@
     background: $backgroundColor;
     border: 1px solid #EEEEEE;
 }
+.card__image {
+    max-width: 100%;
+    height: auto;
+}
 
-.portfolio-card-link {
+.card__link {
     display: block;
     width: 100%;
     height: 100%;
@@ -49,7 +44,7 @@
 
 
 
-.portfolio-gallery-title {
+.card__title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -59,18 +54,18 @@
     margin-bottom: 4px;
 }
 
-.portfolio-gallery-content {
+.card__content {
     padding: 20px 24px;
 }
 
 
-.portfolio-gallery-text {
+.card__text {
     font-size: 16px;
     line-height: 1.87;
     color: $plainTextColor;
 }
 
-.portfolio-overlay {
+.card__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -84,15 +79,15 @@
     transform-origin: bottom;
     transition: transform $commonTransition 500ms;
 
-    .portfolio-card-link:hover &,
-    .portfolio-card-link:focus & {
+    .card__link:hover &,
+    .card__link:focus & {
         transform: scaleY(1);
     }
 }
 
 
 
-.portfolio-overlay-text {
+.card__overlay-text {
     font-size: 18px;
     line-height: 1.56;
     color: $lightTextColor;

@@ -7,13 +7,19 @@
     
 }
 
-.footer-content {
+.footer__content {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
 
-.footer-block-title {
+.footer__logo {
+    color: $lightTextColor;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer__title {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -23,17 +29,17 @@
     margin-bottom: 20px;
 }
 
-.footer-form-field {
+.subscribe {
     display: flex;
     gap: 12px;
     align-items: center;
 }
 
-.footer-form-label {
+.subscribe__label {
     position: absolute;
 }
 
-.footer-form-input {
+.subscribe__input {
     width: 358px;
     height: 50px;
 

@@ -1,9 +1,6 @@
 /* !!!!!!!!!!!   FEATURES       !!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1*/
-.features{
-    display: flex;
-    gap: 30px;
-}
+
 
 .features__item {
     // width: calc((100%-90px)/4);
@@ -21,7 +18,7 @@
 }
 
 
-.features__picture {
+.features__frame {
     display: flex;
     align-items: center;
     justify-content: center;

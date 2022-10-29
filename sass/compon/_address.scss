@@ -1,15 +1,15 @@
-.address-list {
+.address {
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
 
-.address-list-item {
+.address__item {
     line-height: 1.7;
 
 }
 
-.address-contacts {
+.address__contacts {
     color: $footerContactsColor;
 
     transition: color $commonTransition;
@@ -21,7 +21,7 @@
 }
 
 /* unique map color */
-.address-map {
+.address__map {
     color: $lightTextColor;
     transition: color $commonTransition;
 

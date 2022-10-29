@@ -1,13 +1,14 @@
 /* !!!!!!!!!!!!!   OUR  CLIENTS   !!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.client-list {
+
+.client__cardset {
     justify-items: center;
 }
-.client-list-item {
+.client__item {
         width: 170px;
         height: 92px;
 }
-.client-list-link {
+.client__link {
     width: 100%;
     height: 100%;
     
@@ -30,13 +31,13 @@
     
    
     
-.client-list-icon {
+.client__icon {
     fill: $iconDefaultColor;
     
     transition: fill $commonTransition;
 
-    .client-list-link:hover &,
-    .client-list-link:focus & {
+    .client__link:hover &,
+    .client__link:focus & {
         fill: $accentColor;
     }
 }

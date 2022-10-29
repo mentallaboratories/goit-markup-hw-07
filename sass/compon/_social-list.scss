@@ -1,17 +1,17 @@
 /* -----social-list sprites menu -----*/
-.social-list{
+.social{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.social-list-item {
+.social__item {
     width: 44px;
     height: 44px;
 }
     
     
     
-.social-list-link {
+.social__link {
     border-radius: 50%;
     background-color: $backgroundColor;
     width: 100%;
@@ -21,6 +21,10 @@
     gap: 10px;
     align-items: center;
     justify-content: center;
+
+    &--dark {
+            background-color: rgba(255, 255, 255, 0.1);
+    }
 
     transition: background-color $commonTransition;
 
@@ -32,16 +36,16 @@
 
 
 
-.social-list-icon {
+.social__icon {
     fill: $iconDefaultColor;
     transition: fill $commonTransition;
 
-    .footer & {
-        fill: $backgroundColor;
-    }
+    &--light {
+            fill: $backgroundColor;
+        }
 
-    .social-list-link:hover &,
-    .social-list-link:focus & {
+    .social__link:hover &,
+    .social__link:focus & {
         fill: $backgroundColor;
     }
 }
@@ -51,8 +55,6 @@
 
 
 
-.social-list-link {
-    background-color: rgba(255, 255, 255, 0.1);
-}
+
 
 

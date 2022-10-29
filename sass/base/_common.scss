@@ -7,17 +7,10 @@
     margin: 0 auto;
 }
 
-
-.no-padding-top {
-    padding-top: 0;
-}
-
-.flex-gap30 {
+.cardset {
     display: flex;
     gap: 30px;
 }
-
-
 
 .accent {
     color: $accentColor;
