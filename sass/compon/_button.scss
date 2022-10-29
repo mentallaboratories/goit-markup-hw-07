@@ -63,7 +63,7 @@
 
 
 // backdrop modal exit button
-.exit-btn {
+.close__button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -79,27 +79,30 @@
     justify-content: center;
 }
 
-.icon-exit-modal {
+.close__icon {
     fill: #000000;
 
     transition: fill $commonTransition;
+
+    .close__button:hover &,
+    .close__button:focus & {
+        fill: $accentColor;
+    }
 }
 
-.exit-btn:hover .icon-exit-modal,
-.exit-btn:focus .icon-exit-modal {
-    fill: $accentColor;
-}
+
 // backdrop modal form submit button
-.backdrop-submit {
+.form__submit{
     width: 200px;
 
     transition: background-color $commonTransition;
+
+    &:hover,
+    &:focus {
+        background-color: #188CE8;
+    }
 }
 
-.backdrop-submit:hover,
-.backdrop-submit:focus {
-    background-color: #188CE8;
-}
 
 
 
