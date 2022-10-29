@@ -5,30 +5,28 @@
 }
 
 .address__item {
+    
+
+}
+
+.footer__link{
     line-height: 1.7;
 
-}
-
-.address__contacts {
-    color: $footerContactsColor;
-
     transition: color $commonTransition;
-
-    &:hover,
-    &:focus{
-        color: $accentColor;
-    }
-}
-
-/* unique map color */
-.address__map {
-    color: $lightTextColor;
-    transition: color $commonTransition;
-
+    
     &:hover,
     &:focus {
         color: $accentColor;
     }
 }
+
+.address__connect {
+    color: $footerContactsColor;
+}
+
+.address__map {
+    color: $lightTextColor;
+}
+
 
 

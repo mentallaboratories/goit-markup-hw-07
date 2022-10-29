@@ -1,0 +1,28 @@
+.connect {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.connect__link {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    color: $plainTextColor;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+
+.connect__icon {
+    fill: $plainTextColor;
+
+    transition: fill $commonTransition;
+
+    .connect__link:hover &,
+    .connect__link:focus & {
+        fill: $accentColor;
+    }
+}
