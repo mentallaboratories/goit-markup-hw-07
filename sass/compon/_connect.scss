@@ -8,7 +8,10 @@
     display: inline-flex;
     gap: 10px;
     align-items: center;
-    color: $plainTextColor;
+    .link &{
+        color: $plainTextColor;
+    }
+    
 
     &:hover,
     &:focus {

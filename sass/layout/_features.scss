@@ -8,7 +8,7 @@
 .features__title {
     line-height: 1.15;
     text-transform: uppercase;
-    color: var(--title-text-color);
+    color: $titleTextColor;
 
     margin-bottom: 10px;
 }
